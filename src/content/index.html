@@ -1,40 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Site title</title>
-    <meta name="description" content="Description" />
+<html lang="pl">
 
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Drink Water</title>
+  <meta name="description" content="this app will tell you how much water you drink every day" />
 
-    <link rel="manifest" href="manifest.json" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link
-      rel="apple-touch-icon"
-      sizes="192x192"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+  <meta property="og:title" content="drink water with ula" />
+  <meta property="og:description" content="we will tell you how many glass of water you drink every single day!" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="apple-touch-icon" sizes="192x192" href="assets/pwa/icons/icon-192x192.png" />
 
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <h1>Hello world - with simple PWA support!</h1>
+  <link rel="icon" type="image/png" href="assets/pwa/icons/icon-192x192.png" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
 
-    <script src="js/main.js"></script>
-  </body>
+<body>
+  <main class="drink">
+
+    <h1 class="drink__header">you've drunk today:</h1>
+    <div class="drink__glass">
+      <img src="" alt="" class="drink__image">
+      <p class="drink__number">0</p>
+    </div>
+    <button class="drink__button drink__button--1">dodaj szklankę</button>
+    <button class="drink__button drink__button--2">usuń szklankę</button>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+
 </html>
