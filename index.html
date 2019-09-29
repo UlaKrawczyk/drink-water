@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Drink Water</title>
+  <meta name="description" content="this app will tell you how much water you drink every day" />
+
+  <meta property="og:title" content="drink water with ula" />
+  <meta property="og:description" content="we will tell you how many glass of water you drink every single day!" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
+
+  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="apple-touch-icon" sizes="192x192" href="assets/pwa/icons/icon-192x192.png" />
+
+  <link rel="icon" type="image/png" href="assets/pwa/icons/icon-192x192.png" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <main class="drink">
+
+    <h1 class="drink__header">you've drunk today:</h1>
+    <div class="drink__glass">
+      <svg class="drink__image" width="280" height="280" viewBox="0 0 280 280" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M242.748 2.8875C241.085 1.05 238.74 0 236.255 0H43.7555C41.288 0 38.9255 1.05 37.263 2.8875C35.618 4.7075 34.7955 7.1575 35.0405 9.625L61.2905 272.125C61.7455 276.605 65.508 280 70.0055 280H210.005C214.503 280 218.265 276.605 218.703 272.125L244.953 9.625C245.215 7.1575 244.41 4.7075 242.748 2.8875Z"
+          fill="#ECEFF1" />
+        <path class="drink__water"
+          d="M219.455 89.25L202.13 262.5H77.8805L58.4555 68.775C80.3305 61.775 113.58 57.05 140.005 78.75C165.555 99.75 197.755 95.9 219.455 89.25Z"
+          fill="rgb(50, 207, 102" />
+      </svg>
+      <p class="drink__number">0</p>
+    </div>
+    <button class="drink__button drink__button--1">dodaj szklankę</button>
+    <button class="drink__button drink__button--2">usuń szklankę</button>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
