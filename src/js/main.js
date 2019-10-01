@@ -20,7 +20,9 @@ const glassNumber = document.querySelector(".drink__number--js");
 const key = new Date().toISOString().slice(0, 10);
 let number = 0;
 
-localStorage.setItem(key, number);
+if (!localStorage.getItem(key)) {
+  localStorage.setItem(key, number);
+}
 
 if (localStorage.getItem(key)) {
   glassNumber.innerHTML = localStorage.getItem(key);
