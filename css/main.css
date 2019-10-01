@@ -321,7 +321,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #fff;
   background-color: #037529; }
 
@@ -373,9 +373,9 @@ body {
               box-shadow: 1px 4px 8px 3px rgba(0, 0, 0, 0.3);
       font-size: 18px;
       color: #000;
-      -webkit-transition: .3s;
-      -o-transition: .3s;
-      transition: .3s; }
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
       .drink__button--1:hover {
         -webkit-box-shadow: 1px 4px 8px 4px rgba(0, 0, 0, 0.4);
                 box-shadow: 1px 4px 8px 4px rgba(0, 0, 0, 0.4);
@@ -383,16 +383,14 @@ body {
             -ms-transform: translateY(-3px);
                 transform: translateY(-3px); }
     .drink__button--2 {
-      background-color: transparent;
-      padding: 0;
-      font-size: 15px;
+      background-color: #037529;
       color: #ECEFF1;
       text-shadow: 1px 4px 7px rgba(0, 0, 0, 0.9);
-      -webkit-transition: .3s;
-      -o-transition: .3s;
-      transition: .3s; }
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
       .drink__button--2:hover {
         color: #000;
-        text-shadow: 1px 4px 5px black; }
+        text-shadow: none; }
 
 /*# sourceMappingURL=main.css.map */
