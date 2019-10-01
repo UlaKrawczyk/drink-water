@@ -22,7 +22,7 @@ let number = 0;
 
 // console.log(localStorage.setItem(key, number));
 
-if (localStorage.getItem(key)) {
+if (localStorage.getItem(key, number)) {
   glassNumber.innerHTML = localStorage.getItem(key);
 
   number = localStorage.getItem(key);
