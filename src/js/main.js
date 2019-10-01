@@ -17,22 +17,34 @@ if ('serviceWorker' in navigator) {
 const buttonAdd = document.querySelector(".drink__button--1-js");
 const buttonSub = document.querySelector(".drink__button--2-js");
 const glassNumber = document.querySelector(".drink__number--js");
+const key = new Date().toISOString().slice(0, 10);
 let number = 0;
 
-buttonAdd.addEventListener("click", function () {
-  number++;
-  if (number >= 100) {
-    alert("You've drunk too much today:)");
-  } else {
-    glassNumber.innerHTML = number;
-  }
-});
+// console.log(localStorage.setItem(key, number));
 
-buttonSub.addEventListener("click", (e) => {
-  number--;
-  if (number <= 0) {
-    alert("You haven't drunk anything today:)");
-  } else {
-    glassNumber.innerHTML = number;
-  }
-});
+if (localStorage.getItem(key)) {
+  glassNumber.innerHTML = localStorage.getItem(key);
+
+  buttonAdd.addEventListener("click", function () {
+    number++;
+    if (number >= 100) {
+      alert("You've drunk too much today:)");
+    } else {
+      glassNumber.innerHTML = number;
+      localStorage.setItem(key, number);
+    }
+  });
+
+  buttonSub.addEventListener("click", (e) => {
+    number--;
+    if (number < 0) {
+      alert("You haven't drunk anything today:)");
+    } else {
+      glassNumber.innerHTML = number;
+      localStorage.setItem(key, number);
+    }
+  });
+
+} else {
+  glassNumber.innerHTML = number;
+}
