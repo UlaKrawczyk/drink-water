@@ -25,6 +25,8 @@ let number = 0;
 if (localStorage.getItem(key)) {
   glassNumber.innerHTML = localStorage.getItem(key);
 
+  number = localStorage.getItem(key);
+
   buttonAdd.addEventListener("click", function () {
     number++;
     if (number >= 100) {
