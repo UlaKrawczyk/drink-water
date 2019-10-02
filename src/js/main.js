@@ -21,12 +21,13 @@ const key = new Date().toISOString().slice(0, 10);
 let number = 0;
 
 if (!localStorage.getItem(key)) {
+
   localStorage.setItem(key, number);
-}
+  glassNumber.innerHTML = number;
 
-if (localStorage.getItem(key)) {
+} else {
+
   glassNumber.innerHTML = localStorage.getItem(key);
-
   number = localStorage.getItem(key);
 
   buttonAdd.addEventListener("click", function () {
@@ -48,7 +49,4 @@ if (localStorage.getItem(key)) {
       localStorage.setItem(key, number);
     }
   });
-
-} else {
-  glassNumber.innerHTML = number;
 }
