@@ -20,6 +20,9 @@ const glassNumber = document.querySelector(".drink__number--js");
 const key = new Date().toISOString().slice(0, 10);
 let number = 0;
 
+// const myKey = "2019-09-30"
+// localStorage.setItem(myKey, 8);
+
 if (!localStorage.getItem(key)) {
 
   localStorage.setItem(key, number);
@@ -50,3 +53,5 @@ if (!localStorage.getItem(key)) {
     }
   });
 }
+
+console.log(localStorage.getItem(key));
