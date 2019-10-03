@@ -24,34 +24,32 @@ let number = 0;
 // localStorage.setItem(myKey, 8);
 
 if (!localStorage.getItem(key)) {
-
   localStorage.setItem(key, number);
   glassNumber.innerHTML = number;
 
 } else {
-
   glassNumber.innerHTML = localStorage.getItem(key);
   number = localStorage.getItem(key);
-
-  buttonAdd.addEventListener("click", function () {
-    number++;
-    if (number >= 100) {
-      alert("You've drunk too much today:)");
-    } else {
-      glassNumber.innerHTML = number;
-      localStorage.setItem(key, number);
-    }
-  });
-
-  buttonSub.addEventListener("click", (e) => {
-    number--;
-    if (number < 0) {
-      alert("You haven't drunk anything today:)");
-    } else {
-      glassNumber.innerHTML = number;
-      localStorage.setItem(key, number);
-    }
-  });
 }
 
-console.log(localStorage.getItem(key));
+buttonAdd.addEventListener("click", function () {
+  number++;
+  if (number >= 100) {
+    alert("You've drunk too much today:)");
+  } else {
+    glassNumber.innerHTML = number;
+    localStorage.setItem(key, number);
+  }
+});
+
+buttonSub.addEventListener("click", (e) => {
+  number--;
+  if (number < 0) {
+    alert("You haven't drunk anything today:)");
+  } else {
+    glassNumber.innerHTML = number;
+    localStorage.setItem(key, number);
+  }
+});
+
+console.log(localStorage.key);
