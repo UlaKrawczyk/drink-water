@@ -323,7 +323,21 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   color: #fff;
-  background-color: #037529; }
+  background-color: #037529;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .drink {
   width: 100%;
@@ -335,9 +349,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
@@ -351,6 +365,8 @@ body {
   .drink__glass {
     position: relative;
     margin-bottom: 10px; }
+  .drink__image {
+    width: 100%; }
   .drink__number {
     position: absolute;
     top: 50%;
@@ -392,5 +408,16 @@ body {
       .drink__button--2:hover {
         color: #000;
         text-shadow: none; }
+
+.history {
+  min-height: 100px;
+  text-align: center;
+  margin-bottom: 40px; }
+  .history__header {
+    margin-bottom: 10px; }
+  .history__list {
+    list-style: none; }
+  .history__item {
+    padding: 10px 0 10px; }
 
 /*# sourceMappingURL=main.css.map */
