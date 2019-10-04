@@ -20,7 +20,9 @@ body {
   background-color: $bg-color-green;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .drink {
@@ -90,5 +92,24 @@ body {
         text-shadow: none;
       }
     }
+  }
+}
+
+.history {
+  min-height: 100px;
+  text-align: center;
+  margin-bottom: 40px;
+
+  &__header {
+    margin-bottom: 10px;
+  }
+
+  //ul styles:
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    padding: 10px 0 10px;
   }
 }

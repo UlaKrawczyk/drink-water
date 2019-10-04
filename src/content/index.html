@@ -22,8 +22,7 @@
 </head>
 
 <body>
-  <main class="drink">
-
+  <section class="drink">
     <h1 class="drink__header">you've drunk today:</h1>
     <div class="drink__glass">
       <svg class="drink__image" width="280" height="280" viewBox="0 0 280 280" fill="none"
@@ -37,9 +36,14 @@
       </svg>
       <p class="drink__number drink__number--js"></p>
     </div>
-    <button class="drink__button drink__button--1 drink__button--1-js">dodaj szklankę</button>
-    <button class="drink__button drink__button--2 drink__button--2-js">usuń szklankę</button>
-  </main>
+    <button class="drink__button drink__button--1 drink__button--1-js">add glass</button>
+    <button class="drink__button drink__button--2 drink__button--2-js">remowe glass</button>
+  </section>
+
+  <section class="history">
+    <h2 class="history__header">See how much water you drink every day:</h2>
+    <ul class="history__list"></ul>
+  </section>
 
   <script src="js/main.js"></script>
 </body>

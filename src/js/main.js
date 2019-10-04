@@ -20,8 +20,8 @@ const glassNumber = document.querySelector(".drink__number--js");
 const key = new Date().toISOString().slice(0, 10);
 let number = 0;
 
-const myKey = "2019-10-02"
-localStorage.setItem(myKey, 5);
+// const myKey = "2019-10-02"
+// localStorage.setItem(myKey, 5);
 
 if (!localStorage.getItem(key)) {
   localStorage.setItem(key, number);
@@ -52,12 +52,17 @@ buttonSub.addEventListener("click", (e) => {
   }
 });
 
+//adding history to app:
 
-// for (let i = 0; i < localStorage.length; i++) {
+const ul = document.querySelector(".history__list");
 
-//   let key = localStorage.key(i);
-//   console.log(key);
-//   console.log(localStorage.getItem(key));
+for (let i = 0; i < localStorage.length; i++) {
+  let key = localStorage.key(i);
+  let value = localStorage.getItem(key);
+  let content = `${key} - ${value} glasses`;
 
-//   // console.log(`${localStorage.key(i)}  ${localStorage.getItem(key)}`);
-// }
+  const liItem = document.createElement('li');
+  liItem.classList.add('history__item');
+  liItem.textContent = content;
+  ul.appendChild(liItem);
+}
