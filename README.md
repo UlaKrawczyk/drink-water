@@ -9,4 +9,7 @@
 ### This is pwa app. To create it, I used:
 * html5
 * css3
-* java script
+* js es6
+* gulp
+* npm
+* figma (layout design)
