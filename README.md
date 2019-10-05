@@ -1,9 +1,12 @@
-# wtf-gulp-starter
+# DRINK WATER
+## brand new app to help you every day
 
-`npm install -g gulp-cli`
+![water drop with app name](github/cover.jpg)
 
-`npm install`
 
-`gulp`
+**If you want to try it out, click here: [drink water app](https://ulakrawczyk.github.io/drink-water/)**
 
-To publish your page using github pages use `npm run deploy`
+### This is pwa app. To create it, I used:
+* html5
+* css3
+* java script
