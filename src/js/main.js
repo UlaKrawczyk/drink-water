@@ -17,6 +17,7 @@ if ('serviceWorker' in navigator) {
 const buttonAdd = document.querySelector(".drink__button--1-js");
 const buttonSub = document.querySelector(".drink__button--2-js");
 const glassNumber = document.querySelector(".drink__number--js");
+const ul = document.querySelector(".history__list");
 const key = new Date().toISOString().slice(0, 10);
 let number = 0;
 
@@ -52,11 +53,7 @@ buttonSub.addEventListener("click", (e) => {
   }
 });
 
-//adding history to app:
-
-const ul = document.querySelector(".history__list");
-
-for (let i = 0; i < localStorage.length; i++) {
+for (let i = 0; i < localStorage.length - 1; i++) {
   let key = localStorage.key(i);
   let value = localStorage.getItem(key);
   let content = `${key} - ${value} glasses`;
