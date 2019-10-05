@@ -21,9 +21,6 @@ const ul = document.querySelector(".history__list");
 const key = new Date().toISOString().slice(0, 10);
 let number = 0;
 
-// const myKey = "2019-10-02"
-// localStorage.setItem(myKey, 5);
-
 if (!localStorage.getItem(key)) {
   localStorage.setItem(key, number);
   glassNumber.innerHTML = number;
