@@ -50,7 +50,7 @@ buttonSub.addEventListener("click", (e) => {
   }
 });
 
-for (let i = 0; i < localStorage.length - 1; i++) {
+for (let i = 0; i < localStorage.length -1; i++) {
   let key = localStorage.key(i);
   let value = localStorage.getItem(key);
   let content = `${key} - ${value} glasses`;
