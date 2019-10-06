@@ -18,6 +18,7 @@ const buttonAdd = document.querySelector(".drink__button--1-js");
 const buttonSub = document.querySelector(".drink__button--2-js");
 const glassNumber = document.querySelector(".drink__number--js");
 const ul = document.querySelector(".history__list");
+const liItem = "";
 const key = new Date().toISOString().slice(0, 10);
 let number = 0;
 
@@ -30,6 +31,27 @@ if (!localStorage.getItem(key)) {
   number = localStorage.getItem(key);
 }
 
+for (let i = 0; i < localStorage.length; i++) {
+
+  let key = localStorage.key(i);
+  //sprawdzenie czy format daty
+  const regEX = /[0-9]{4}-[0-9]{2}-[0-9]{2}/;
+  if (key.match(regEX)) {
+    let value = localStorage.getItem(key);
+    let content = `${key} - ${value} glasses`;
+
+    const liItem = document.createElement('li');
+    liItem.classList.add('history__item');
+    liItem.textContent = content;
+    ul.appendChild(liItem);
+  }
+}
+
+function syncToday() {
+  const item = document.querySelector("li:last-child");
+  item.textContent = `${localStorage.key(localStorage.length -1)} - ${localStorage.getItem(key)} glasses`;
+}
+
 buttonAdd.addEventListener("click", function () {
   number++;
   if (number >= 100) {
@@ -37,6 +59,7 @@ buttonAdd.addEventListener("click", function () {
   } else {
     glassNumber.innerHTML = number;
     localStorage.setItem(key, number);
+    syncToday();
   }
 });
 
@@ -47,16 +70,6 @@ buttonSub.addEventListener("click", (e) => {
   } else {
     glassNumber.innerHTML = number;
     localStorage.setItem(key, number);
+    syncToday();
   }
 });
-
-for (let i = 0; i < localStorage.length -1; i++) {
-  let key = localStorage.key(i);
-  let value = localStorage.getItem(key);
-  let content = `${key} - ${value} glasses`;
-
-  const liItem = document.createElement('li');
-  liItem.classList.add('history__item');
-  liItem.textContent = content;
-  ul.appendChild(liItem);
-}
