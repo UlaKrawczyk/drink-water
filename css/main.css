@@ -409,6 +409,10 @@ body {
       .drink__button--2:hover {
         color: #000;
         text-shadow: none; }
+    .drink__button--3 {
+      width: 170px;
+      color: #444;
+      background-color: #abd4b9; }
 
 .history {
   min-height: 100px;
