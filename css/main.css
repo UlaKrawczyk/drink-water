@@ -414,7 +414,7 @@ body {
   text-align: center;
   margin-bottom: 40px; }
   .history__header {
-    margin-bottom: 10px; }
+    margin: 0 15px 10px 15px; }
   .history__list {
     list-style: none; }
   .history__item {
