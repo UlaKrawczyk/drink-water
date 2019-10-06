@@ -341,7 +341,7 @@ body {
 
 .drink {
   width: 100%;
-  padding: 50px 0 50px 0;
+  padding: 30px 0 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -356,7 +356,7 @@ body {
       -ms-flex-align: center;
           align-items: center; }
   .drink__header {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     max-width: 240px;
     font-size: 30px;
     line-height: 140%;
@@ -376,7 +376,8 @@ body {
             transform: translate(-50%, -50%);
     padding-top: 30px;
     font-size: 112px;
-    color: #000; }
+    color: #000;
+    font-weight: bold; }
   .drink__button {
     margin-top: 30px;
     width: 216px;
