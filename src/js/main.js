@@ -16,11 +16,15 @@ if ('serviceWorker' in navigator) {
 
 const buttonAdd = document.querySelector(".drink__button--1-js");
 const buttonSub = document.querySelector(".drink__button--2-js");
+// const buttonClear = document.querySelector(".drink__button--3-js");
 const glassNumber = document.querySelector(".drink__number--js");
 const ul = document.querySelector(".history__list");
 const liItem = "";
 const key = new Date().toISOString().slice(0, 10);
+const regEX = /[0-9]{4}-[0-9]{2}-[0-9]{2}/;
 let number = 0;
+
+localStorage.setItem("2019-10-05", 2);
 
 if (!localStorage.getItem(key)) {
   localStorage.setItem(key, number);
@@ -35,7 +39,6 @@ for (let i = 0; i < localStorage.length; i++) {
 
   let key = localStorage.key(i);
   //sprawdzenie czy format daty
-  const regEX = /[0-9]{4}-[0-9]{2}-[0-9]{2}/;
   if (key.match(regEX)) {
     let value = localStorage.getItem(key);
     let content = `${key} - ${value} glasses`;
@@ -73,3 +76,27 @@ buttonSub.addEventListener("click", (e) => {
     syncToday();
   }
 });
+
+// buttonClear.addEventListener("click", function () {
+
+//   if (!localStorage.getItem(key)) {
+//     alert('There is nothing to remove.');
+//     number = 0;
+//     localStorage.setItem(key, number);
+//     glassNumber.innerHTML = number;
+
+//   } else {
+//     let key = localStorage.key(0);
+//     if (key.match(regEX)) {
+//       localStorage.removeItem(key);
+//       const li = ul.getElementsByTagName('li')[0];
+//       ul.removeChild(li);
+//     } else {
+
+//     }
+//   }
+//   // ul.innerHTML = "";
+//   // number = 0;
+//   // localStorage.setItem(key, number);
+//   // glassNumber.innerHTML = number;
+// });
