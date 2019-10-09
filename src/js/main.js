@@ -37,11 +37,13 @@ if (!localStorage.getItem(key)) {
 }
 
 for (let i = 0; i < localStorage.length; i++) {
-  let key = localStorage.key(i);
+  let keyItem = localStorage.key(i);
+  console.log(keyItem);
   //sprawdzenie czy format daty
-  if (key.match(regEX)) {
-    let value = localStorage.getItem(key);
-    let content = `${key} - ${value} glasses`;
+  if (keyItem.match(regEX)) {
+    let value = localStorage.getItem(keyItem);
+    let content = `${keyItem} - ${value} glasses`;
+    console.log(content);
 
     const liItem = document.createElement('li');
     liItem.classList.add('history__item');
@@ -51,9 +53,13 @@ for (let i = 0; i < localStorage.length; i++) {
 }
 
 function syncToday() {
-  if ('li:last-child') {
-    const item = document.querySelector("li:last-child");
-    item.textContent = `${localStorage.key(localStorage.length -1)} - ${localStorage.getItem(key)} glasses`;
+  const liList = document.querySelectorAll("li");
+  for (let element of liList) {
+    const elemString = element.innerText;
+    const elemData = elemString.substr(0, 10);
+    if (elemData === key) {
+      element.textContent = `${key} - ${localStorage.getItem(key)} glasses`;
+    }
   }
 }
 
