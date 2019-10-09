@@ -35,12 +35,10 @@ if (!localStorage.getItem(key)) {
 
 for (let i = 0; i < localStorage.length; i++) {
   let keyItem = localStorage.key(i);
-  console.log(keyItem);
   //sprawdzenie czy format daty
   if (keyItem.match(regEX)) {
     let value = localStorage.getItem(keyItem);
     let content = `${keyItem} - ${value} glasses`;
-    console.log(content);
 
     const liItem = document.createElement('li');
     liItem.classList.add('history__item');
@@ -102,3 +100,5 @@ buttonClear.addEventListener('click', function () {
   liItem.textContent = content;
   ul.appendChild(liItem);
 });
+
+console.log(Object.keys(localStorage));
