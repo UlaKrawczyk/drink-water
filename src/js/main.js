@@ -24,9 +24,6 @@ const key = new Date().toISOString().slice(0, 10);
 const regEX = /[0-9]{4}-[0-9]{2}-[0-9]{2}/;
 let number = 0;
 
-localStorage.setItem("2019-10-04", 5);
-localStorage.setItem("2019-10-05", 2);
-
 if (!localStorage.getItem(key)) {
   localStorage.setItem(key, number);
   glassNumber.innerHTML = number;
